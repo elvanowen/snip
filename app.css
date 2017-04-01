@@ -1,0 +1,93 @@
+html {
+    height: 100%;
+}
+body {
+    min-height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+    background: #f9f8f7;
+}
+#container {
+    height:100vh;
+}
+#container > .row {
+    height:100vh;
+    display: flex;
+    margin: 0;
+}
+#container > .row > * {
+    padding: 0;
+    max-height: 100vh;
+    overflow: scroll;
+}
+h1, h2, h3 {
+    margin: 0;
+}
+.topbar {
+    text-align: center;
+    padding: 10px 20px;
+    background: #272822;
+    color: #fff;
+    height: 73px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+.topbar-title {
+    position: fixed;
+    z-index: 99999;
+    width: inherit;
+}
+.topbar-code {
+    border-left: 1px solid #1f211c;
+    border-bottom: 1px solid #1f211c;
+    box-shadow: 0 1px 3px #1f211c;
+}
+.CodeMirror {
+    height: calc(100vh - 73px);
+    border-left: 1px solid #000;
+    padding: 1em 0;
+    line-height: 1.5;
+}
+.CodeMirror-code {
+    text-indent: 10px;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.topbar-title + ul {
+    margin-top: 73px;
+}
+ul li {
+    position: relative;
+    padding: 12px 20px;
+    margin: 0;
+    border-top: 1px solid #ddd;
+    font-size: 17px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+ul li:first-child {
+    border-top: none;
+}
+ul li.list-btn-add {
+    border-top: 1px solid #ddd;
+    text-align: center;
+}
+ul li.active {
+    background: #eee;
+    color: #272822;
+    font-weight: bold;
+}
+
+.form-control, .form-control:focus {
+    outline: 0 !important;
+    box-shadow: none !important;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    border-bottom: 1px solid #272822 !important;
+}
